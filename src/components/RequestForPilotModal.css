@@ -1,0 +1,123 @@
+:root {
+  --theme-color: orange;
+  --theme-color-hover: darkorange;
+}
+
+.pilot-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.pilot-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.pilot-modal-header {
+  background-color: var(--theme-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+.pilot-form {
+  padding: 20px;
+}
+
+.pilot-form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-field {
+  position: relative;
+  flex: 1;
+}
+
+.form-field.col-6 { flex: 1; }
+.form-field.full-width { width: 100%; margin-bottom: 20px; }
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 12px 14px 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+}
+
+/* Make icons orange and keep them left */
+.form-field i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--theme-color);
+  pointer-events: none;
+}
+
+/* Floating placeholder effect */
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #aaa;
+  transition: 0.2s ease all;
+  transform-origin: left top;
+}
+
+/* Animate placeholder on focus or typing */
+.form-field input:focus::placeholder,
+.form-field input:not(:placeholder-shown)::placeholder,
+.form-field textarea:focus::placeholder,
+.form-field textarea:not(:placeholder-shown)::placeholder {
+  transform: translateY(-18px) scale(0.8);
+  color: var(#000);
+}
+
+/* Submit button */
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: var(--theme-color-hover);
+}

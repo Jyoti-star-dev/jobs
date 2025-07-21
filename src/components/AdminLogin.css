@@ -1,0 +1,190 @@
+/* Admin Modal Styles - Orange Theme */
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.admin-modal-container {
+  width: 900px;
+  height: 600px;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+}
+
+.admin-modal-left {
+  flex: 1;
+  position: relative;
+}
+
+.admin-gif-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-gif-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 69, 0, 0.8));
+  z-index: 1;
+}
+
+.admin-welcome-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  z-index: 2;
+}
+
+.admin-welcome-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.admin-welcome-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.admin-modal-right {
+  width: 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: relative;
+}
+
+.admin-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.admin-close-btn:hover {
+  color: #ff8c00;
+}
+
+.admin-form-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: #ff8c00;
+}
+
+.admin-form-icon {
+  font-size: 2rem;
+}
+
+.admin-input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.admin-input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff8c00;
+}
+
+.admin-input-group input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.admin-input-group input:focus {
+  outline: none;
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.admin-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.admin-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+/* Animations remain the same */
+
+.submit-icon {
+  font-size: 16px;
+}
+
+.admin-security-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+.security-icon {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
